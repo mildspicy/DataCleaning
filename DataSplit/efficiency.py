@@ -46,7 +46,7 @@ class SplitData:
                 print(file)
                 if file.startswith(target_file):
                     full_path = '{}/{}'.format(self.source_files, file)
-                    pd = pandas.read_excel(full_path, engine='openpyxl', dtype=str)
+                    pd = pandas.read_excel(full_path, engine='openpyxl')
                     filter_pd = self.filter_data(target_file, pd)
                     self.result.append(filter_pd)
             self.save_data(target_file)
@@ -57,21 +57,21 @@ class SplitData:
             filter_efficiency = self.config["filter_efficiency"]
             for row in filter_efficiency:
                 if row == "人工接通量":
-                    pd = pd.loc[(int(pd[row]) > filter_efficiency[row])]
+                    pd = pd.loc[(pd[row] > filter_efficiency[row])]
                 else:
                     pd = pd.loc[(pd[row] == filter_efficiency[row])]
         elif target_file == "场景":
             filter_efficiency = self.config["filter_scene"]
             for row in filter_efficiency:
                 if row == "人工接通量":
-                    pd = pd.loc[(int(pd[row]) > filter_efficiency[row])]
+                    pd = pd.loc[(pd[row] > filter_efficiency[row])]
                 else:
                     pd = pd.loc[(pd[row] == filter_efficiency[row])]
         return pd
 
     def save_data(self, target_file):
         out_full_path = '{}/{}/{}.xlsx'.format(self.rootpath, self.name, target_file)
-        con = pandas.concat(self.result_eff, ignore_index=False)
+        con = pandas.concat(self.result, ignore_index=False)
         con.to_excel(out_full_path, index=False)
 
 
