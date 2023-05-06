@@ -1,0 +1,42 @@
+{
+  "北京": {
+    "out_dir" : "北京项目",
+    "source_files": "C:\\Users\\Administrator\\Desktop\\BI\\效能场景每日数据\\效能场景",
+    "rootpath" : "C:\\Users\\Administrator\\Desktop\\Python\\DataCleaning\\outfile",
+    "split_files": [
+      "效能",
+      "场景"
+    ],
+    "filter_efficiency": {
+        "人员归属省份名称": "北京",
+        "人工接通量": 0
+    },
+    "filter_scene": {
+      "部室名称": "北京众包平台组织",
+      "省份名称" : "北京"
+    },
+    "type": 0,
+    "start_date": "2023-01-01",
+    "end_date": "2023-04-30"
+  },
+  "广西": {
+    "out_dir" : "广西项目",
+    "source_files": "C:\\Users\\Administrator\\Desktop\\BI\\效能场景每日数据\\效能场景",
+    "rootpath" : "C:\\Users\\Administrator\\Desktop\\Python\\DataCleaning\\outfile",
+    "split_files": [
+      "效能",
+      "场景"
+    ],
+     "filter_efficiency": {
+        "人员归属省份名称": "广西",
+        "人工接通量": 0
+    },
+    "filter_scene": {
+      "部室名称": "北京众包平台组织",
+      "省份名称" : "广西"
+    },
+    "type": 0,
+    "start_date": "2023-01-01",
+    "end_date": "2023-04-30"
+  }
+}
