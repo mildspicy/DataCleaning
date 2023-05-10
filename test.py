@@ -100,8 +100,28 @@ import pandas
 #         out_full_path = '{}/{}/{}.xlsx'.format(cfg.OUT_PATH, config[project]['out_dir'],
 #                                                config[project]['out_sheets'][index]['file_name'])
 #         df.to_excel(out_full_path, index=False)
+# data = {}
+# df = pandas.read_excel(r'D:\共享\Seafile\重庆呼入/会员表.xlsx',
+#                        sheet_name='会员等级', usecols={"会员工号", "职位"})
+# for row in df.itertuples():
+#     data[row[1]] = row[2]
+# # print(data)
+#
+# pd = pandas.read_excel(r'C:\Users\Administrator\Desktop\BI\效能场景每日数据\bak\效能20230509.xlsx')
+# pd = pd.loc[pd['人员归属省份名称'] == '重庆']
+# pd['人员类型'] = pd.apply(lambda x: data.get(x['员工编号']), axis=1)
+# print(pd)
 
-df = pandas.read_excel(r'C:\Users\Administrator\Desktop\Python\DataCleaning\prod_test/河北呼入/场景表.xlsx',
-                       sheet_name='场景表')
-print(df)
+
+data =[{
+        "file_name": "会员表",
+        "sheet_name": "会员等级",
+        "columns": ["会员工号", "职位"],
+        "mapping_columns": "员工编号",
+        "replace/append_columns": "人员类型"
+      }]
+print(len(data))
+
+for i in data:
+    print(i['file_name'])
 
