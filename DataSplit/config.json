@@ -1,6 +1,6 @@
 {
   "北京": {
-    "out_dir" : "北京项目",
+    "out_dir" : "北京呼入",
     "split_files": [
       "效能",
       "场景"
@@ -14,17 +14,19 @@
       "省份名称" : ["北京"]
     },
     "type": 0,
-    "场景": {
-     "out_sheet_name": "场景表",
+    "场景":{
+      "out_path": "/场景表",
+      "out_sheet_name": "场景表",
       "file_name": "2023-86热线场景表"
     },
-    "效能": {
-     "out_sheet_name": "效能表",
+     "效能":{
+       "out_path": "/效能表",
+      "out_sheet_name": "效能表",
       "file_name": "2023-86热线效能表"
-    }
+      }
   },
   "广西": {
-    "out_dir" : "广西项目",
+    "out_dir" : "广西呼入",
     "split_files": [
       "效能",
       "场景"
@@ -39,16 +41,18 @@
     },
     "type": 0,
     "场景": {
+      "out_path": "/场景表",
      "out_sheet_name": "场景表",
       "file_name": "2023-86热线场景表"
     },
     "效能": {
+      "out_path": "/效能表",
      "out_sheet_name": "效能表",
       "file_name": "2023-86热线效能表"
     }
   },
   "重庆": {
-    "out_dir" : "重庆项目",
+    "out_dir" : "重庆呼入",
     "split_files": [
       "效能",
       "场景"
@@ -63,16 +67,18 @@
     },
     "type": 0,
     "场景": {
+       "out_path": "",
      "out_sheet_name": "10086热线场景式测评员工满意度统计报表",
-      "file_name": "满意度.xlsx"
+      "file_name": "满意度"
     },
     "效能": {
+       "out_path": "",
      "out_sheet_name": "新86热线员工效能指标统计日报表",
       "file_name": "效能表"
     }
   },
   "江苏": {
-    "out_dir" : "江苏项目",
+    "out_dir" : "江苏呼入",
     "split_files": [
       "效能",
       "场景"
@@ -87,16 +93,18 @@
     },
     "type": 0,
     "场景": {
+       "out_path": "",
      "out_sheet_name": "场景表",
-      "file_name": "2023-86热线场景表"
+      "file_name": "场景表"
     },
     "效能": {
+       "out_path": "",
      "out_sheet_name": "效能表",
-      "file_name": "2023-86热线效能表"
+      "file_name": "效能表"
     }
   },
   "江西": {
-    "out_dir" : "江西项目",
+    "out_dir" : "江西呼入",
     "split_files": [
       "效能",
       "场景"
@@ -115,16 +123,18 @@
     },
     "type": 0,
     "场景": {
+       "out_path": "/场景表",
      "out_sheet_name": "场景表",
-      "file_name": "2023-86热线场景表"
+      "file_name": "场景表"
     },
     "效能": {
+       "out_path": "/效能表",
      "out_sheet_name": "效能表",
-      "file_name": "2023-86热线效能表"
+      "file_name": "效能表"
     }
   },
   "河北": {
-    "out_dir" : "河北项目",
+    "out_dir" : "河北呼入",
     "split_files": [
       "效能",
       "场景"
@@ -145,39 +155,14 @@
     },
     "type": 0,
     "场景": {
+       "out_path": "",
      "out_sheet_name": "场景表",
       "file_name": "场景表"
     },
     "效能": {
+       "out_path": "",
      "out_sheet_name": "效能表",
       "file_name": "效能表"
-    }
-  },
-  "陕西": {
-    "out_dir" : "陕西项目",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["陕西"],
-       "人工接通量": 0
-
-    },
-    "filter_scene": {
-      "部室名称":[
-        "陕西众包平台组织"
-      ],
-      "省份名称" : ["陕西"]
-    },
-    "type": 0,
-    "场景": {
-     "out_sheet_name": "场景",
-      "file_name": "陕西原始数据表"
-    },
-    "效能": {
-     "out_sheet_name": "效能",
-      "file_name": "陕西原始数据表"
     }
   }
 }

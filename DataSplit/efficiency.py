@@ -37,6 +37,7 @@ class SplitData:
             print(file)
             full_path = '{}/{}'.format(self.source_files, file)
             pd = pandas.read_excel(full_path, engine='openpyxl')
+            # columns = pd.columns.tolist()
             update_date = pd['统计日期'].drop_duplicates().tolist()
             # 获取文件类型名
             file_category = file[:2]
@@ -71,21 +72,22 @@ class SplitData:
         return pd
 
     def save_data(self, file_category, update_date):
-        out_full_path = '{}/{}/{}.xlsx'.format(self.out_path, self.config['out_dir'],
-                                               self.config[file_category]['file_name'])
+        out_full_path = '{}/{}{}/{}.xlsx'.format(self.out_path, self.config['out_dir'],
+                                                 self.config[file_category]['out_path'],
+                                                 self.config[file_category]['file_name'])
+        print(out_full_path)
         if os.path.exists(out_full_path):
-            pd = pandas.read_excel(out_full_path, engine='openpyxl',
-                                   sheet_name=self.config[file_category]['out_sheet_name'])
+            pd = pandas.read_excel(out_full_path, sheet_name=self.config[file_category]['out_sheet_name'])
             result_date = pd['统计日期'].drop_duplicates().tolist()
-            if update_date in result_date:
+            if [v for v in update_date if v in result_date]:
                 for row in update_date:
                     pd = pd.loc[(pd['统计日期'] != row)]
             pd_result = pandas.DataFrame(self.result[0])
             con = pandas.concat([pd, pd_result], ignore_index=False)
         else:
             con = pandas.concat(self.result, ignore_index=False)
-        con.to_excel(out_full_path, index=False, sheet_name=self.config[file_category]['out_sheet_name'],
-                     engine='openpyxl')
+
+        con.to_excel(out_full_path, index=False, sheet_name=self.config[file_category]['out_sheet_name'])
         print("Export excel Success !!!!!!!!!")
 
 
