@@ -1,87 +1,61 @@
 {
   "北京": {
     "out_dir" : "北京呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-    "filter_efficiency": {
-        "人员归属省份名称": ["北京"],
-        "人工接通量": 0
-    },
-    "filter_scene": {
-      "部室名称": ["北京众包平台组织"],
-      "省份名称" : ["北京"]
-    },
     "type": 0,
-    "场景":{
-      "out_path": "/场景表",
-      "out_sheet_name": "场景表",
-      "file_name": "2023-86热线场景表"
-    },
-     "效能":{
-       "out_path": "/效能表",
-      "out_sheet_name": "效能表",
-      "file_name": "2023-86热线效能表"
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "/效能表",
+        "out_sheet_name": "效能表",
+        "file_name": "2023-86热线效能表",
+        "filter_name": {
+          "人员归属省份名称": ["北京"],
+          "人工接通量": 0
+        }
       },
-    "mapping_tables": []
+      {
+        "table_name": "场景",
+        "out_sheet_name": "场景表",
+        "out_path": "/场景表",
+        "file_name": "2023-86热线场景表",
+        "filter_name": {
+          "省份名称" : ["北京"],
+          "部室名称": ["北京众包平台组织"]
+        }
+      }
+    ]
   },
   "广西": {
     "out_dir" : "广西呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["广西"],
-        "人工接通量": 0
-    },
-    "filter_scene": {
-      "部室名称": ["北京众包平台组织"],
-      "省份名称" : ["广西"]
-    },
     "type": 0,
-    "场景": {
-      "out_path": "/场景表",
-     "out_sheet_name": "场景表",
-      "file_name": "2023-86热线场景表"
-    },
-    "效能": {
-      "out_path": "/效能表",
-     "out_sheet_name": "效能表",
-      "file_name": "2023-86热线效能表"
-    },
-    "mapping_tables": []
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "/效能表",
+        "out_sheet_name": "效能表",
+        "file_name": "2023-86热线效能表",
+        "filter_name": {
+          "人员归属省份名称": ["广西"],
+          "人工接通量": 0
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "/场景表",
+        "out_sheet_name": "场景表",
+        "file_name": "2023-86热线场景表",
+        "filter_name": {
+         "部室名称": ["广西众包平台组织"],
+          "省份名称" : ["广西"]
+        }
+      }
+    ]
   },
   "重庆": {
     "out_dir" : "重庆呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["重庆"],
-        "人工接通量": 0
-    },
-    "filter_scene": {
-      "部室名称": [
-        "重庆众包（呼入）平台组织"
-      ],
-      "省份名称": [
-        "重庆"
-      ]
-    },
     "type": 0,
-    "场景": {
-       "out_path": "",
-     "out_sheet_name": "10086热线场景式测评员工满意度统计报表",
-      "file_name": "满意度"
-    },
-    "效能": {
-       "out_path": "",
-     "out_sheet_name": "新86热线员工效能指标统计日报表",
-      "file_name": "效能表"
-    },
     "mapping_tables": [
       {
         "file_name": "会员表",
@@ -90,181 +64,177 @@
         "mapping_columns": "员工编号",
         "replace/append_columns": "人员类型"
       }
+    ],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "",
+        "out_sheet_name": "新86热线员工效能指标统计日报表",
+        "file_name": "效能表",
+        "filter_name": {
+          "人员归属省份名称": ["重庆"],
+          "人工接通量": 0
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "",
+        "out_sheet_name": "10086热线场景式测评员工满意度统计报表",
+        "file_name": "满意度",
+        "filter_name": {
+          "部室名称": ["重庆众包（呼入）平台组织"],
+          "省份名称": ["重庆"]
+        }
+      }
     ]
   },
   "江苏": {
     "out_dir" : "江苏呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["江苏"],
-        "人工接通量": 0
-    },
-    "filter_scene": {
-      "部室名称": ["江苏众包平台组织"],
-      "省份名称" : ["江苏"]
-    },
     "type": 0,
-    "场景": {
-       "out_path": "",
-     "out_sheet_name": "场景表",
-      "file_name": "场景表"
-    },
-    "效能": {
-       "out_path": "",
-     "out_sheet_name": "效能表",
-      "file_name": "效能表"
-    },
-    "mapping_tables": []
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "",
+        "out_sheet_name": "效能表",
+        "file_name": "效能表",
+        "filter_name": {
+          "人员归属省份名称": ["江苏"],
+        "人工接通量": 0
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "",
+        "out_sheet_name": "场景表",
+        "file_name": "场景表",
+        "filter_name": {
+          "部室名称": ["江苏众包平台组织"],
+          "省份名称" : ["江苏"]
+        }
+      }
+    ]
   },
   "江西": {
     "out_dir" : "江西呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["江西"],
-        "物理职场名称": [
-          "江西九江瑞昌市职场", "江西南昌小蓝经济开发区职场"
-        ]
-    },
-    "filter_scene": {
-      "物理职场名称":[
-        "江西九江瑞昌市职场", "江西南昌小蓝经济开发区职场"
-      ],
-      "省份名称" : ["江西"]
-    },
     "type": 0,
-    "场景": {
-       "out_path": "/场景表",
-     "out_sheet_name": "场景表",
-      "file_name": "场景表"
-    },
-    "效能": {
-       "out_path": "/效能表",
-     "out_sheet_name": "效能表",
-      "file_name": "效能表"
-    },
-    "mapping_tables": []
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "/效能表",
+        "out_sheet_name": "效能表",
+        "file_name": "效能表",
+        "filter_name": {
+          "人员归属省份名称": ["江西"],
+         "物理职场名称": ["江西九江瑞昌市职场", "江西南昌小蓝经济开发区职场"]
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "/场景表",
+        "out_sheet_name": "场景表",
+        "file_name": "场景表",
+        "filter_name": {
+          "物理职场名称":["江西九江瑞昌市职场", "江西南昌小蓝经济开发区职场"],
+          "省份名称" : ["江西"]
+        }
+      }
+    ]
   },
   "河北": {
     "out_dir" : "河北呼入",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["河北"],
-        "物理职场名称": [
-          "德阳天府数谷职场", "石家庄裕华天山南大街职场"
-        ],
-       "人工接通量": 0
-
-    },
-    "filter_scene": {
-      "部室名称":[
-        "河北众包平台组织"
-      ],
-      "省份名称" : ["河北"]
-    },
     "type": 0,
-    "场景": {
-       "out_path": "",
-     "out_sheet_name": "场景表",
-      "file_name": "场景表"
-    },
-    "效能": {
-       "out_path": "",
-     "out_sheet_name": "效能表",
-      "file_name": "效能表"
-    },
-    "mapping_tables": []
-  },
-  "陕西": {
-    "out_dir" : "陕西项目",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["陕西"],
-       "人工接通量": 0
-
-    },
-    "filter_scene": {
-      "部室名称":[
-        "陕西众包平台组织"
-      ],
-      "省份名称" : ["陕西"]
-    },
-    "type": 1,
-    "场景": {
-     "out_sheet_name": "场景",
-      "file_name": "陕西原始数据表"
-    },
-    "效能": {
-     "out_sheet_name": "效能",
-      "file_name": "陕西原始数据表"
-    },
-      "mapping_tables": []
-  },
-  "山东": {
-    "out_dir" : "山东项目",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["山东"],
-       "人工接通量": 0
-
-    },
-    "filter_scene": {
-      "部室名称":[
-        "山东众包平台组织"
-      ],
-      "省份名称" : ["山东"]
-    },
-    "type": 1,
-    "场景": {
-     "out_sheet_name": "场景",
-      "file_name": "山东原始数据表"
-    },
-    "效能": {
-     "out_sheet_name": "日报",
-      "file_name": "山东原始数据表"
-    },
-      "mapping_tables": []
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "",
+        "out_sheet_name": "效能表",
+        "file_name": "效能表",
+        "filter_name": {
+          "人员归属省份名称": ["河北"],
+          "物理职场名称": ["德阳天府数谷职场", "石家庄裕华天山南大街职场"],
+          "人工接通量": 0
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "",
+        "out_sheet_name": "场景表",
+        "file_name": "场景表",
+        "filter_name": {
+           "部室名称":["河北众包平台组织"],
+           "省份名称" : ["河北"]
+        }
+      }
+    ]
   },
   "新疆": {
-    "out_dir" : "新疆项目",
-    "split_files": [
-      "效能",
-      "场景"
-    ],
-     "filter_efficiency": {
-        "人员归属省份名称": ["新疆"],
-       "班组名称": ["众信佳", "ZXJ"]
-    },
-    "filter_scene": {
-      "部室名称":[
-        "新疆众包平台组织（呼入）"
-      ],
-      "省份名称" : ["新疆"],
-      "班组名称": ["众信佳", "ZXJ"]
-    },
+    "out_dir": "新疆项目",
     "type": 1,
-    "场景": {
-     "out_sheet_name": "场景",
-      "file_name": "山东原始数据表"
-    },
-    "效能": {
-     "out_sheet_name": "日报",
-      "file_name": "山东原始数据表"
-    },
-      "mapping_tables": []
+    "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "",
+        "out_sheet_name": "日报",
+        "file_name": "新疆原始报表",
+        "filter_name": {
+          "人员归属省份名称": [
+            "新疆"
+          ],
+          "班组名称": [
+            "众信佳",
+            "ZXJ"
+          ]
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_sheet_name": "场景",
+        "out_path": "",
+        "file_name": "新疆原始报表",
+        "filter_name": {
+          "省份名称": [
+            "新疆"
+          ],
+          "班组名称": [
+            "众信佳",
+            "ZXJ"
+          ],
+          "部室名称": [
+            "新疆众包平台组织（呼入）"
+          ]
+        }
+      }
+    ]
+  },
+  "山东": {
+    "out_dir" : "众信佳\\呼入数据清洗\\数据源\\山东",
+    "type": 1,
+      "mapping_tables": [],
+    "tables": [
+      {
+        "table_name": "效能",
+        "out_path": "",
+        "out_sheet_name": "日报",
+        "file_name": "山东原始数据",
+        "filter_name": {
+          "人员归属省份名称": ["山东"],
+          "人工接通量": 0
+        }
+      },
+      {
+        "table_name": "场景",
+        "out_path": "",
+        "out_sheet_name": "场景",
+        "file_name": "山东原始数据",
+        "filter_name": {
+           "部室名称":["山东众包平台组织"],
+           "省份名称" : ["山东"]
+        }
+      }
+    ]
   }
 }

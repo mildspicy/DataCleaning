@@ -1,3 +1,4 @@
+import datetime
 import os
 # from DataSplit import efficiency
 import pandas
@@ -34,18 +35,15 @@ import pandas
 # con.to_excel(writer, sheet_name="test1", index=False)
 #
 # writer.close()
-
+#
 # data = []
-# df = pandas.read_excel(r'./test_file/test.xlsx', sheet_name='test2')
+# pd = pandas.read_excel(r'./test_file/yeas.xlsx')
 # writer = pandas.ExcelWriter(r'./test_file/test.xlsx', engine='openpyxl', if_sheet_exists='replace', mode='a')
-# for sheet in writer.sheets:
-#     print(sheet)
-# df = df.loc[df['日期'] == int(12)]
-# print(df)
-# # data.append(df)
-# #
-# # conn = pandas.concat(data, ignore_index=False)
-# # conn.to_excel(writer, index=False, sheet_name='test3')
+#
+# data.append(pd)
+#
+# conn = pandas.concat(data, ignore_index=False)
+# conn.to_excel(writer, index=False, sheet_name='test3')
 # writer.close()
 
 # data1 = [20230430, 20230429, 20230428, 20230427, 20230426, 20230425, 20230424, 20230423, 20230422, 20230421, 20230420, 20230419, 20230418, 20230417, 20230416, 20230415, 20230414, 20230413, 20230412, 20230411, 20230410, 20230409, 20230408, 20230407, 20230406, 20230405, 20230404, 20230403, 20230402, 20230401]
@@ -112,16 +110,48 @@ import pandas
 # pd['人员类型'] = pd.apply(lambda x: data.get(x['员工编号']), axis=1)
 # print(pd)
 
+#
+# data =[{
+#         "file_name": "会员表",
+#         "sheet_name": "会员等级",
+#         "columns": ["会员工号", "职位"],
+#         "mapping_columns": "员工编号",
+#         "replace/append_columns": "人员类型"
+#       }]
+# print(len(data))
+#
+# for i in data:
+#     print(i['file_name'])
 
-data =[{
-        "file_name": "会员表",
-        "sheet_name": "会员等级",
-        "columns": ["会员工号", "职位"],
-        "mapping_columns": "员工编号",
-        "replace/append_columns": "人员类型"
-      }]
-print(len(data))
 
-for i in data:
-    print(i['file_name'])
+# str = ['众信佳一班', 'ZXJ一班', '维语一班']
+# data = []
+#
+# for i in str:
+#     # print(i)
+#     if i.find('众信佳') >= 0 or i.find('ZXJ') >= 0:
+#         data.append(i)
+#
+# print(data)
 
+# data = []
+# pd_result = pandas.read_excel(r'C:\Users\Administrator\Desktop\Python\DataCleaning\test_file\新疆10月.xlsx')
+# # data.append(pd_result)
+# writer = pandas.ExcelWriter(r'C:\Users\Administrator\Desktop\Python\DataCleaning\prod_test\新疆项目\新疆原始报表.xlsx', engine='openpyxl', mode='a', if_sheet_exists='replace')
+# pd = pandas.read_excel(r'C:\Users\Administrator\Desktop\Python\DataCleaning\prod_test\新疆项目\新疆原始报表.xlsx', sheet_name='日报')
+# con = pandas.concat([pd_result, pd], ignore_index=False)
+# con.to_excel(writer, index=False, sheet_name='日报')
+# writer.close()
+
+# writer = pandas.ExcelWriter(r'C:\Users\Administrator\Desktop\Python\DataCleaning\prod_test\陕西呼入\陕西原始数据表.xlsx', engine='openpyxl', mode='a', if_sheet_exists='overlay')
+# df = pandas.read_excel(r'C:\Users\Administrator\Desktop\Python\DataCleaning\prod_test\陕西呼入\陕西原始数据表.xlsx', sheet_name='场景')
+# print(writer)
+
+
+pd = pandas.read_excel(r'C:\Users\Administrator\Desktop\Python\DataCleaning\test_file\yeas_out.xlsx')
+print(pd)
+pd['日期'] = pd.apply(lambda x: datetime.datetime.strptime(str(x['日期']), '%Y%m%d'), axis=1)
+print(pd)
+
+# date = datetime.datetime.strptime('20230101', '%Y%m%d')
+# print(date)
